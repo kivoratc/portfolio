@@ -1,0 +1,85 @@
+/* Tokens del sistema de diseño de Kivora TC (documento design-system/sistema-de-diseno.md).
+   Los nombres de la izquierda son los del sistema. Los alias de abajo son los que usan los demás CSS.
+   El tema lo define data-theme en <html>: "light" o "dark". Sin valor, sigue el sistema operativo. */
+
+:root {
+  /* Tokens del sistema, tema claro */
+  --bg: #f4f2ff;
+  --surface: #ffffff;
+  --surface-2: #ebe8fb;
+  --fg: #1c1b22;
+  --muted: #55535f;
+  --accent: #5b3fd1;
+  --accent-fill: #8b6cf6;
+  --shadow: #6e6e78;
+  --line: #d6d2ea;
+  --ok: #13875a;
+  --warn: #9a6a00;
+  --danger: #c23a63;
+  --on-accent: #ffffff;
+
+  /* Alias usados por el resto de los CSS */
+  --color-fondo: var(--bg);
+  --color-superficie: var(--surface);
+  --color-superficie-2: var(--surface-2);
+  --color-texto: var(--fg);
+  --color-texto-suave: var(--muted);
+  --color-acento: var(--accent-fill);
+  --color-acento-texto: var(--accent);
+  --color-acento-oscuro: var(--accent);
+  --color-borde: var(--line);
+  --color-sombra: var(--shadow);
+
+  /* Tipografía: Lilita One para titulares, Outfit para texto, Caveat para el nombre de la marca */
+  --fuente-titulo: "Lilita One", "Arial Black", sans-serif;
+  --fuente-texto: "Outfit", system-ui, sans-serif;
+  --fuente-nota: "Caveat", cursive;
+
+  /* Escala: portada 92 px, sección 44 px, tarjeta 22 px, texto 16 px, etiqueta 13 px */
+  --texto-portada: clamp(3.25rem, 9vw, 5.75rem);
+  --texto-seccion: clamp(2.25rem, 5vw, 2.75rem);
+  --texto-tarjeta: 1.375rem;
+  --texto-base: 1rem;
+  --texto-etiqueta: 0.8125rem;
+  --interlineado: 1.55;
+
+  /* Espaciado y forma */
+  --espacio-xs: 0.5rem;
+  --espacio-s: 0.75rem;
+  --espacio-m: 1.25rem;
+  --espacio-l: 2rem;
+  --espacio-xl: 4rem;
+  --radio: 22px;
+  --radio-pequeno: 12px;
+  --radio-pildora: 999px;
+  --sombra-desplazada: 4px 4px 0 var(--shadow);
+  --ancho-max: 1120px;
+}
+
+/* Tema oscuro: si el usuario no eligió claro, sigue el sistema operativo */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1b22;
+    --surface: #2a2933;
+    --surface-2: #34333f;
+    --fg: #ffffff;
+    --muted: #b9b6c9;
+    --accent: #8b6cf6;
+    --accent-fill: #8b6cf6;
+    --shadow: #6e6e78;
+    --line: #3d3c49;
+  }
+}
+
+/* Tema oscuro elegido por el usuario */
+:root[data-theme="dark"] {
+  --bg: #1c1b22;
+  --surface: #2a2933;
+  --surface-2: #34333f;
+  --fg: #ffffff;
+  --muted: #b9b6c9;
+  --accent: #8b6cf6;
+  --accent-fill: #8b6cf6;
+  --shadow: #6e6e78;
+  --line: #3d3c49;
+}

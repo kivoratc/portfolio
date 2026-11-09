@@ -1,0 +1,196 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  /* Reserva el espacio de la barra de scroll para que el contenido no salte */
+  scrollbar-gutter: stable;
+  /* Barra de scroll con los colores del sistema (Firefox y Chrome 121+) */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-acento) var(--color-superficie-2);
+}
+
+/* Barra de scroll para Safari y Chrome anteriores a 121 */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-superficie-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-acento);
+  border: 3px solid var(--color-superficie-2);
+  border-radius: var(--radio-pildora);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-acento-texto);
+}
+
+/* El cuerpo es una columna: el pie queda siempre al final de la pantalla */
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-base);
+  line-height: var(--interlineado);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-acento-texto);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 3px;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: var(--espacio-l) var(--espacio-m);
+}
+
+.saltar {
+  position: absolute;
+  left: var(--espacio-m);
+  top: -100px;
+  padding: 0.5rem 1rem;
+  background: var(--color-acento);
+  color: var(--color-carbon);
+  border-radius: var(--radio-pequeno);
+  z-index: 10;
+}
+
+.saltar:focus {
+  top: var(--espacio-s);
+}
+
+/* Etiqueta: 13 px en mayúsculas, según el sistema */
+/* El nombre de la marca va en Caveat; el resto del texto no */
+.marca span {
+  font-family: var(--fuente-nota);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* "TC" del nombre de la marca, en el acento del sistema para texto */
+.marca-tc {
+  color: var(--color-acento-texto);
+}
+
+/* Nombre de la marca dentro de un texto */
+.nombre-marca {
+  font-family: var(--fuente-nota);
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* Todo lo que se pulsa muestra la mano */
+a,
+button,
+summary,
+[role="button"] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Feedback al pasar el cursor en controles que no tienen otro efecto */
+.filtro:hover:not([aria-pressed="true"]) {
+  background: var(--color-superficie-2);
+}
+
+.pie a:hover,
+.seccion-cabecera a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.etiqueta {
+  font-size: var(--texto-etiqueta);
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Botón secundario: borde y texto en fg, fondo transparente, sombra desplazada */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.6rem 1.25rem;
+  background: transparent;
+  border: 2px solid var(--color-texto);
+  border-radius: var(--radio-pildora);
+  box-shadow: var(--sombra-desplazada);
+  color: var(--color-texto);
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+/* Botón primario: relleno de acento, texto blanco, misma sombra */
+.boton--primario {
+  background: var(--color-acento);
+  border-color: var(--color-acento);
+  color: var(--on-accent);
+}
+
+.boton:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-sombra);
+}
+
+.boton:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--color-sombra);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,30 @@
+/* Página 404 */
+
+.no-encontrada {
+  min-height: 60dvh;
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  gap: var(--espacio-m);
+}
+
+.no-encontrada img {
+  width: clamp(140px, 22vw, 200px);
+  height: auto;
+}
+
+.no-encontrada h1 {
+  font-size: var(--texto-seccion);
+}
+
+.no-encontrada p:not(.nota) {
+  max-width: 40ch;
+  font-size: 1.125rem;
+  color: var(--color-texto-suave);
+}
+
+.no-encontrada .acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-s);
+}

@@ -1,0 +1,68 @@
+/* Página de inicio: portada, proyectos destacados y resumen */
+
+.heroe {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--espacio-l);
+  padding: var(--espacio-xl) 0 var(--espacio-l);
+}
+
+.heroe h1 {
+  font-size: var(--texto-portada);
+}
+
+.heroe-texto p {
+  margin-top: var(--espacio-m);
+  max-width: 34ch;
+  font-size: 1.25rem;
+  color: var(--color-texto-suave);
+}
+
+.heroe-texto .acciones {
+  margin-top: var(--espacio-l);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-s);
+}
+
+.heroe-mascota img {
+  width: clamp(160px, 26vw, 260px);
+  height: auto;
+}
+
+.seccion {
+  padding-top: var(--espacio-xl);
+}
+
+.seccion h2 {
+  font-size: var(--texto-seccion);
+}
+
+.seccion-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--espacio-s);
+  margin-bottom: var(--espacio-l);
+}
+
+.seccion-texto {
+  max-width: 60ch;
+  font-size: 1.125rem;
+}
+
+.seccion-texto + .seccion-texto {
+  margin-top: var(--espacio-m);
+}
+
+@media (max-width: 640px) {
+  .heroe {
+    grid-template-columns: 1fr;
+  }
+
+  .heroe-mascota {
+    order: -1;
+  }
+}

@@ -1,0 +1,14 @@
+/* Transición entre la lista y el detalle: la portada de la tarjeta se expande hasta la del detalle.
+   Usa View Transitions entre páginas (Chrome y Edge). En otros navegadores la navegación es normal. */
+
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,112 @@
+/* Vista de detalle de un proyecto */
+
+.detalle {
+  display: grid;
+  gap: var(--espacio-m);
+}
+
+.detalle h1 {
+  font-size: var(--texto-seccion);
+}
+
+.detalle-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-s);
+}
+
+.detalle-cover,
+.galeria-lista img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--color-acento);
+  border: 2px solid var(--color-texto);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-desplazada);
+}
+
+/* La galería tiene su propio espacio entre el título y las imágenes */
+.detalle-galeria {
+  display: grid;
+  gap: var(--espacio-m);
+}
+
+.detalle-galeria .subtitulo {
+  margin-top: 0;
+}
+
+.galeria-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--espacio-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.galeria-boton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: var(--radio);
+  cursor: zoom-in;
+}
+
+.galeria-lista img {
+  aspect-ratio: 3 / 2;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.galeria-boton:hover img {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-sombra);
+}
+
+.detalle-resumen {
+  font-size: 1.25rem;
+  color: var(--color-texto-suave);
+}
+
+.detalle-texto {
+  max-width: 65ch;
+  font-size: 1.125rem;
+}
+
+.subtitulo {
+  margin-top: var(--espacio-s);
+  font-family: var(--fuente-titulo);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.detalle-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detalle-tecnologias li {
+  padding: 0.3rem 0.8rem;
+  background: var(--color-superficie-2);
+  border-radius: var(--radio-pildora);
+  font-size: var(--texto-etiqueta);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.detalle-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-s);
+}
+
+.volver {
+  justify-self: start;
+}

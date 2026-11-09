@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kivora TC · Proyecto</title>
+  <meta name="description" content="Detalle de un proyecto de Kivora TC.">
+  <link rel="icon" href="assets/logo-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lilita+One&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/transiciones.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/tarjeta.css">
+  <link rel="stylesheet" href="css/detalle.css">
+  <link rel="stylesheet" href="css/visor.css">
+  <link rel="stylesheet" href="css/progreso.css">
+</head>
+<body>
+  <div id="progreso" class="progreso" aria-hidden="true"></div>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/logo-oscuro.svg">
+        <img src="assets/logo-claro.svg" alt="" width="44" height="44">
+      </picture>
+      <span>Kivora <span class="marca-tc">TC</span></span>
+    </a>
+    <nav class="navegacion" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="boton tema" id="cambiar-tema">Modo oscuro</button>
+  </header>
+
+  <main id="principal">
+    <section id="detalle" class="detalle" aria-labelledby="titulo">
+      <a class="boton volver" href="proyectos.html">Volver a proyectos</a>
+
+      <div class="detalle-meta">
+        <span id="categoria" class="etiqueta"></span>
+        <span id="anio" class="etiqueta"></span>
+      </div>
+
+      <h1 id="titulo"></h1>
+
+      <img id="cover" class="detalle-cover" src="" alt="" width="1200" height="675" hidden>
+
+      <p id="resumen" class="detalle-resumen"></p>
+      <p id="descripcion" class="detalle-texto"></p>
+
+      <section id="galeria" class="detalle-galeria" aria-labelledby="galeria-titulo" hidden>
+        <h2 id="galeria-titulo" class="subtitulo">Galería</h2>
+        <ul id="galeria-lista" class="galeria-lista"></ul>
+      </section>
+
+      <h2 class="subtitulo">Tecnologías</h2>
+      <ul id="tecnologias" class="detalle-tecnologias"></ul>
+
+      <div id="enlaces" class="detalle-acciones" hidden></div>
+    </section>
+
+    <section id="no-encontrado" class="detalle" hidden>
+      <h1>Proyecto no encontrado</h1>
+      <p class="detalle-texto">Ese proyecto no existe, o el enlace tiene un error.</p>
+      <div class="detalle-acciones">
+        <a class="boton boton--primario" href="proyectos.html">Ver todos los proyectos</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="visor" class="visor" aria-label="Visor de imágenes">
+    <div class="visor-contenido">
+      <div class="visor-barra">
+        <p id="visor-contador" class="etiqueta" aria-live="polite"></p>
+        <button type="button" class="boton" id="visor-cerrar">Cerrar</button>
+      </div>
+
+      <div class="visor-cuerpo">
+        <img id="visor-imagen" class="visor-imagen" src="" alt="">
+      </div>
+
+      <div id="visor-controles" class="visor-controles" hidden>
+        <button type="button" class="boton" id="visor-anterior">Anterior</button>
+        <button type="button" class="boton" id="visor-siguiente">Siguiente</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="pie">
+    <div class="pie-contenido">
+      <p>© 2026 <span class="nombre-marca">Kivora <span class="marca-tc">TC</span></span></p>
+      <ul>
+        <li><a href="https://github.com/kivoratc" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://x.com/kivoratc" rel="noopener noreferrer">X (Twitter)</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/tarjeta.js"></script>
+  <script src="js/progreso.js"></script>
+  <script src="js/detalle.js"></script>
+  <script src="js/enlaces.js"></script>
+</body>
+</html>

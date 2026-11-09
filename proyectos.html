@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kivora TC · Proyectos</title>
+  <meta name="description" content="Proyectos de Kivora TC: identidad, interfaces y web.">
+  <link rel="icon" href="assets/logo-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lilita+One&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/transiciones.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/tarjeta.css">
+  <link rel="stylesheet" href="css/proyectos.css">
+  <link rel="stylesheet" href="css/paginacion.css">
+</head>
+<body>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/logo-oscuro.svg">
+        <img src="assets/logo-claro.svg" alt="" width="44" height="44">
+      </picture>
+      <span>Kivora <span class="marca-tc">TC</span></span>
+    </a>
+    <nav class="navegacion" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="boton tema" id="cambiar-tema">Modo oscuro</button>
+  </header>
+
+  <main id="principal">
+    <header class="encabezado-pagina">
+      <h1>Proyectos</h1>
+      <p>Lo que he hecho, y lo que aprendí en cada uno.</p>    </header>
+
+    <div class="barra">
+      <div class="campo">
+        <label for="buscar">Buscar proyecto</label>
+        <input id="buscar" type="search" placeholder="Título, tecnología o palabra clave" autocomplete="off">
+      </div>
+
+      <div class="grupo-filtro">
+        <p id="etiqueta-categoria" class="etiqueta">Categoría</p>
+        <div id="filtro-categoria" class="filtros" role="group" aria-labelledby="etiqueta-categoria"></div>
+      </div>
+    </div>
+
+    <p id="contador" class="contador" aria-live="polite"></p>
+    <ul id="lista-proyectos" class="resultados"></ul>
+
+    <nav id="paginacion" class="paginacion" aria-label="Paginación" hidden></nav>
+
+    <div id="vacio" class="vacio" hidden>
+      <p>No encontré proyectos con esos filtros. Prueba con otra palabra o quita algún filtro.</p>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="pie-contenido">
+      <p>© 2026 <span class="nombre-marca">Kivora <span class="marca-tc">TC</span></span></p>
+      <ul>
+        <li><a href="https://github.com/kivoratc" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://x.com/kivoratc" rel="noopener noreferrer">X (Twitter)</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/tarjeta.js"></script>
+  <script src="js/proyectos.js"></script>
+  <script src="js/enlaces.js"></script>
+</body>
+</html>

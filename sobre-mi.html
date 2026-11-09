@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kivora TC · Sobre mí</title>
+  <meta name="description" content="Sobre Kivora TC y sobre mí: me gusta crear cosas y compartirlas con la comunidad.">
+  <link rel="icon" href="assets/logo-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lilita+One&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sobre.css">
+</head>
+<body>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/logo-oscuro.svg">
+        <img src="assets/logo-claro.svg" alt="" width="44" height="44">
+      </picture>
+      <span>Kivora <span class="marca-tc">TC</span></span>
+    </a>
+    <nav class="navegacion" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="sobre-mi.html" aria-current="page">Sobre mí</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="boton tema" id="cambiar-tema">Modo oscuro</button>
+  </header>
+
+  <main id="principal">
+    <article class="sobre">
+      <h1>Sobre mí</h1>      <p>Simplemente me gusta crear cosas y compartirlas con la comunidad.</p>
+      <p><span class="nombre-marca">Kivora <span class="marca-tc">TC</span></span> es la marca con la que publico lo que hago: identidad visual, interfaces y sitios web. La mascota, el gato morado, aparece en todo lo que sale de aquí.</p>
+      <p>No sigo una fórmula. Pruebo, publico lo que funciona, aprendo de lo que no, y paso a lo siguiente.</p>
+
+      <ul class="redes" aria-label="Redes sociales">
+        <li><a class="boton" href="https://github.com/kivoratc" rel="noopener noreferrer">GitHub</a></li>
+        <li><a class="boton" href="https://x.com/kivoratc" rel="noopener noreferrer">X (Twitter)</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="pie">
+    <div class="pie-contenido">
+      <p>© 2026 <span class="nombre-marca">Kivora <span class="marca-tc">TC</span></span></p>
+      <ul>
+        <li><a href="https://github.com/kivoratc" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://x.com/kivoratc" rel="noopener noreferrer">X (Twitter)</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/enlaces.js"></script>
+</body>
+</html>

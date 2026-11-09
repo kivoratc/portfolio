@@ -1,0 +1,81 @@
+/* Visor de imágenes de la galería (elemento dialog nativo).
+   Altura y ancho fijos: la imagen siempre ocupa todo el ancho; si es más alta, se desplaza dentro del visor. */
+
+.visor {
+  width: min(960px, 92vw);
+  height: min(86dvh, 820px);
+  padding: var(--espacio-m);
+  overflow: hidden;
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  border: 2px solid var(--color-texto);
+  border-radius: var(--radio);
+  box-shadow: 8px 8px 0 var(--color-sombra);
+}
+
+.visor[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.visor::backdrop {
+  background: rgb(28 27 34 / 0.75);
+}
+
+.visor-contenido {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+
+.visor-barra,
+.visor-controles {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-s);
+}
+
+/* Área de la imagen: es la única parte que se desplaza */
+.visor-cuerpo {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--color-superficie-2);
+  border-radius: var(--radio);
+}
+
+/* Barra de scroll del visor oculta: la imagen se puede desplazar con la rueda, el dedo o el teclado */
+.visor-cuerpo {
+  scrollbar-width: none;
+}
+
+.visor-cuerpo::-webkit-scrollbar {
+  display: none;
+}
+
+.visor-cuerpo::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.visor-cuerpo::-webkit-scrollbar-thumb {
+  background: var(--color-acento);
+  border: 0;
+  border-radius: var(--radio-pildora);
+}
+
+/* Con el visor abierto, la página de atrás no se desplaza */
+html.visor-abierto {
+  overflow: hidden;
+}
+
+.visor-imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+}

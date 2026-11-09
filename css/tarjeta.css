@@ -1,0 +1,53 @@
+/* Lista de proyectos y tarjeta de proyecto */
+
+.resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--espacio-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tarjeta {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+  padding: var(--espacio-m);
+  background: var(--color-superficie-2);
+  color: var(--color-texto);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-desplazada);
+  text-decoration: none;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.tarjeta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-acento);
+}
+
+.tarjeta h3 {
+  margin-top: 0.25rem;
+  font-size: var(--texto-tarjeta);
+}
+
+.tarjeta-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--color-acento);
+  border-radius: var(--radio-pequeno);
+}
+
+.tarjeta-meta {
+  font-size: var(--texto-etiqueta);
+  color: var(--color-texto-suave);
+}
+
+.tarjeta-resumen {
+  flex: 1;
+  color: var(--color-texto-suave);
+}

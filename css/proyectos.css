@@ -1,0 +1,88 @@
+/* Página de proyectos: encabezado, buscador, filtros y resultados */
+
+.encabezado-pagina {
+  margin-bottom: var(--espacio-l);
+}
+
+.encabezado-pagina h1 {
+  font-size: var(--texto-seccion);
+}
+
+.encabezado-pagina p {
+  margin-top: var(--espacio-s);
+  font-size: 1.125rem;
+  color: var(--color-texto-suave);
+}
+
+.barra {
+  display: grid;
+  gap: var(--espacio-m);
+  margin-bottom: var(--espacio-l);
+}
+
+.campo {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 520px;
+}
+
+.campo label {
+  font-weight: 500;
+}
+
+.campo input {
+  min-height: 44px;
+  padding: 0.6rem 0.9rem;
+  font: inherit;
+  color: inherit;
+  background: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-pequeno);
+}
+
+.campo input:focus-visible {
+  border-color: var(--color-acento);
+}
+
+.grupo-filtro {
+  display: grid;
+  gap: var(--espacio-xs);
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-xs);
+}
+
+.filtro {
+  min-height: 44px;
+  padding: 0.4rem 1rem;
+  font: inherit;
+  color: var(--color-texto);
+  background: transparent;
+  border: 2px solid var(--color-acento-oscuro);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filtro[aria-pressed="true"] {
+  background: var(--color-acento);
+  border-color: var(--color-acento);
+  color: var(--color-carbon);
+}
+
+.contador {
+  margin-bottom: var(--espacio-m);
+  font-size: var(--texto-etiqueta);
+  color: var(--color-texto-suave);
+}
+
+.vacio {
+  padding: var(--espacio-xl) 0;
+  text-align: center;
+}
+
+.vacio p {
+  color: var(--color-texto-suave);
+}

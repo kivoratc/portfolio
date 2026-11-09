@@ -1,0 +1,28 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencias y builds (por si se agrega una herramienta más adelante)
+node_modules/
+dist/
+build/
+
+# Archivos comprimidos generados al empaquetar
+*.zip
+
+# Variables de entorno y secretos
+.env
+.env.*
+*.pem
+*.key
+
+# Registros
+*.log
+npm-debug.log*

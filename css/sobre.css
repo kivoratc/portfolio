@@ -1,0 +1,24 @@
+/* Página Sobre mí */
+
+.sobre {
+  max-width: 680px;
+  display: grid;
+  gap: var(--espacio-m);
+}
+
+.sobre h1 {
+  font-size: var(--texto-seccion);
+}
+
+.sobre p {
+  font-size: 1.125rem;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-s);
+  margin: var(--espacio-s) 0 0;
+  padding: 0;
+  list-style: none;
+}
