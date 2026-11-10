@@ -24,9 +24,7 @@
   background: var(--color-superficie);
   border: 2px solid var(--color-texto);
   border-radius: var(--radio-pildora);
-  box-shadow: var(--sombra-desplazada);
   cursor: pointer;
-  transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
 .pagina[aria-current="page"] {
@@ -35,13 +33,7 @@
   color: var(--on-accent);
 }
 
-.paginacion button:hover:not(:disabled) {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--color-sombra);
-}
-
 .paginacion button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  box-shadow: none;
 }

@@ -39,8 +39,6 @@
     if (p.cover) {
       cover.src = p.cover;
       cover.alt = p.titulo;
-      // Mismo nombre que la tarjeta de origen: la portada se expande en la transición
-      cover.style.viewTransitionName = "portada-" + p.id;
     }
   }
 

@@ -28,7 +28,6 @@
   --color-acento-texto: var(--accent);
   --color-acento-oscuro: var(--accent);
   --color-borde: var(--line);
-  --color-sombra: var(--shadow);
 
   /* Tipografía: Lilita One para titulares, Outfit para texto, Caveat para el nombre de la marca */
   --fuente-titulo: "Lilita One", "Arial Black", sans-serif;
@@ -52,7 +51,6 @@
   --radio: 22px;
   --radio-pequeno: 12px;
   --radio-pildora: 999px;
-  --sombra-desplazada: 4px 4px 0 var(--shadow);
   --ancho-max: 1120px;
 }
 

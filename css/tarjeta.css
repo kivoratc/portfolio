@@ -19,14 +19,7 @@
   color: var(--color-texto);
   border: 2px solid var(--color-borde);
   border-radius: var(--radio);
-  box-shadow: var(--sombra-desplazada);
   text-decoration: none;
-  transition: transform 150ms ease, box-shadow 150ms ease;
-}
-
-.tarjeta:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--color-acento);
 }
 
 .tarjeta h3 {

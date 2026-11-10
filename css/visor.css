@@ -10,7 +10,6 @@
   color: var(--color-texto);
   border: 2px solid var(--color-texto);
   border-radius: var(--radio);
-  box-shadow: 8px 8px 0 var(--color-sombra);
 }
 
 .visor[open] {

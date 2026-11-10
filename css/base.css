@@ -152,7 +152,7 @@ button:disabled {
   letter-spacing: 0.04em;
 }
 
-/* Botón secundario: borde y texto en fg, fondo transparente, sombra desplazada */
+/* Botón secundario: borde y texto en fg, fondo transparente */
 .boton {
   display: inline-flex;
   align-items: center;
@@ -161,28 +161,16 @@ button:disabled {
   background: transparent;
   border: 2px solid var(--color-texto);
   border-radius: var(--radio-pildora);
-  box-shadow: var(--sombra-desplazada);
   color: var(--color-texto);
   font-weight: 500;
   text-decoration: none;
-  transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
-/* Botón primario: relleno de acento, texto blanco, misma sombra */
+/* Botón primario: relleno de acento, texto blanco */
 .boton--primario {
   background: var(--color-acento);
   border-color: var(--color-acento);
   color: var(--on-accent);
-}
-
-.boton:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--color-sombra);
-}
-
-.boton:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 var(--color-sombra);
 }
 
 @media (prefers-reduced-motion: reduce) {

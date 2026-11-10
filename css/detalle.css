@@ -24,7 +24,6 @@
   background: var(--color-acento);
   border: 2px solid var(--color-texto);
   border-radius: var(--radio);
-  box-shadow: var(--sombra-desplazada);
 }
 
 /* La galería tiene su propio espacio entre el título y las imágenes */
@@ -58,12 +57,6 @@
 
 .galeria-lista img {
   aspect-ratio: 3 / 2;
-  transition: transform 120ms ease, box-shadow 120ms ease;
-}
-
-.galeria-boton:hover img {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--color-sombra);
 }
 
 .detalle-resumen {
