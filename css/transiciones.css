@@ -1,0 +1,72 @@
+/* Transiciones entre páginas (View Transitions API).
+   En navegadores sin soporte, la navegación es normal. */
+
+@view-transition {
+  navigation: auto;
+}
+
+/* La cabecera y el pie son iguales en todas las páginas: se quedan fijos
+   y no parpadean al cambiar de página */
+.cabecera {
+  view-transition-name: cabecera;
+}
+
+.pie {
+  view-transition-name: pie;
+}
+
+/* El contenido principal sale hacia arriba y entra desde abajo */
+main {
+  view-transition-name: contenido;
+}
+
+@keyframes salir-contenido {
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes entrar-contenido {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+::view-transition-old(contenido) {
+  animation: 160ms ease-in both salir-contenido;
+}
+
+::view-transition-new(contenido) {
+  animation: 240ms 40ms ease-out both entrar-contenido;
+}
+
+/* Fondo de la página: fundido corto para que el cambio se sienta ágil */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 160ms;
+}
+
+/* Con movimiento reducido, solo fundido (sin desplazamiento) */
+@keyframes fundir-salida {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fundir-entrada {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(contenido) {
+    animation: 160ms ease-in both fundir-salida;
+  }
+
+  ::view-transition-new(contenido) {
+    animation: 160ms ease-out both fundir-entrada;
+  }
+}

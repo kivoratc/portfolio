@@ -26,7 +26,15 @@ assets/             Logos y imágenes de los proyectos
 
 ## Ver el sitio en tu computadora
 
-Abre `index.html` con doble clic. No hace falta un servidor.
+Hace falta un servidor local. Las transiciones entre páginas no funcionan si abres los archivos directamente con doble clic.
+
+Desde la carpeta del proyecto, ejecuta:
+
+```bash
+python -m http.server 8000
+```
+
+Luego abre `http://localhost:8000` en el navegador.
 
 ## Agregar un proyecto
 
